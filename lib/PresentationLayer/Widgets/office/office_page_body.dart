@@ -37,9 +37,9 @@ class OfficeBody extends StatelessWidget {
                       children: [
                         Text(
                           "address".tr,
-                          style: SecondStyle,
+                          style: Theme.of(context).textTheme.displayLarge,
                         ),
-                        Text(office.address, style: thirdly),
+                        Text(office.address, style: Theme.of(context).textTheme.displayLarge),
                       ]),
                   const Spacer(),
                   IconButton(

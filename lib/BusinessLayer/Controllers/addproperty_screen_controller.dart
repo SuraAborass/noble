@@ -2,8 +2,6 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:noble/BusinessLayer/Controllers/cities_controller.dart';
@@ -75,8 +73,11 @@ class AddPropertyController extends GetxController {
     SnackBars.successSnackbar(roomscontroller.value.text);
   }
 
-  @override
+late final BuildContext context;
+
+ @override
   void onReady() {
+
     for (var item in citiesController.cities) {
       citesitems.add(DropdownMenuItem<String>(
         child: Row(
@@ -92,7 +93,7 @@ class AddPropertyController extends GetxController {
             ),
             Text(
               item.name,
-              style: SecondStyle,
+              style:Theme.of(context).textTheme.titleSmall,
             )
           ],
         ),
@@ -102,7 +103,7 @@ class AddPropertyController extends GetxController {
 
     for (var item in claddingController.claddings) {
       claddingitems.add(DropdownMenuItem<dynamic>(
-        child: Text(item.name, style: SecondStyle),
+        child: Text(item.name, style: Theme.of(context).textTheme.titleSmall),
         value: item.name,
       ));
     }
@@ -110,22 +111,22 @@ class AddPropertyController extends GetxController {
       typesItems.add(DropdownMenuItem<dynamic>(
         child: Text(
           item.name,
-          style: SecondStyle,
+          style: Theme.of(context).textTheme.titleSmall,
         ),
         value: item.id,
       ));
     }
-    optionsItems.add(const DropdownMenuItem<dynamic>(
+    optionsItems.add( DropdownMenuItem<dynamic>(
       child: Text(
         "بيع",
-        style: SecondStyle,
+        style: Theme.of(context).textTheme.titleSmall,
       ),
       value: 0,
     ));
-    optionsItems.add(const DropdownMenuItem<dynamic>(
+    optionsItems.add( DropdownMenuItem<dynamic>(
       child: Text(
         "إيجار",
-        style:SecondStyle,
+        style: Theme.of(context).textTheme.titleSmall,
       ),
       value: 1,
     ));

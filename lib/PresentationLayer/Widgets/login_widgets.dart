@@ -99,7 +99,7 @@ class Button extends StatelessWidget {
                   ),
                 Text(
                   loadingText != "" ? loadingText : text1,
-                  style: sixthly,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
               ],
             ),

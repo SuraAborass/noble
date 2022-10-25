@@ -2,13 +2,14 @@
 
 import 'package:dio/dio.dart';
 import 'package:noble/Constants/api_links.dart';
+import 'package:noble/DataAccessLayer/Models/property.dart';
 
 class PropertyClient {
 
-  Future<bool> property(type ,title) async {
+  Future<bool> property(property) async {
     var response = await Dio().post(
         "https://noble.brain.sy/api/v1/property",
-        data: {"type": type, "title": title},);
+        data: {"property": Property},);
     if (response.statusCode == 200) {
       return true;
     } else {
@@ -17,10 +18,10 @@ class PropertyClient {
   }
 
 
-  Future<List<dynamic>> getProperty(type,title) async {
+  Future<List<dynamic>> getProperty(property) async {
     try {
       var response = await Dio().post(ApiLinks.baseUrl + ApiLinks.properties,
-          data: {"type": type,"title":title});
+          data: {"property": Property});
 
       if (response.statusCode == 200) {
         return response.data;
@@ -33,13 +34,10 @@ class PropertyClient {
     return [];
   }
 
-  Future<dynamic> updateInfo(id, type, title) async {
+  Future<dynamic> updateInfo(property) async {
     var response =
-    await Dio().post(ApiLinks.baseUrl + ApiLinks.properties, data: {
-      "id": id,
-      "type": type,
-      "title": title,
-    });
+    await Dio().post(ApiLinks.baseUrl + ApiLinks.properties,
+        data: {"property": Property});
     print(response.statusCode);
     if (response.statusCode == 201) {
       return response.data;

@@ -61,9 +61,9 @@ class Nearbyoffices extends StatelessWidget {
                                       ),
                                       Text(
                                         officesController.offices[i].name,
-                                        style: seventh,
+                                        style: Theme.of(context).textTheme.displaySmall,
                                       ),
-                                      const Text("دمشق", style: seventh),
+                                      Text("دمشق", style: Theme.of(context).textTheme.displaySmall),
                                     ]),
                               ),
                             )),

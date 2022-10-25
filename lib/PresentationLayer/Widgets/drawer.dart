@@ -28,7 +28,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Drawer(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.scaffoldBackgroundColor,
       child: GetBuilder(
           init: boxContoller,
           builder: (_) {
@@ -40,12 +40,12 @@ class MyDrawer extends StatelessWidget {
                       boxContoller.user != null
                           ? boxContoller.user!.name
                           : "Noble User",
-                      style: FourthSyle),
+                      style: Theme.of(context).textTheme.bodyLarge),
                   accountEmail: Text(
                     boxContoller.user != null
                         ? boxContoller.user!.mobileNumber
                         : "",
-                    style: FourthSyle,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   currentAccountPicture: CircleAvatar(
                     backgroundColor: AppColors.orange,
@@ -58,7 +58,8 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   title: Text(
                     "home".tr,
-                    style: FirstStyle,
+                    style: Theme.of(context).textTheme.bodySmall,
+
                   ),
                   leading: const Icon(
                     Icons.home,
@@ -66,14 +67,14 @@ class MyDrawer extends StatelessWidget {
                   ),
                   onTap: () {
                     Get.toNamed(AppRoutes.homepage);
+
                   },
                 ),
                 ListTile(
                   title: Text(
                     "profile".tr,
-                     style: FirstStyle,
-                    //style: ThemeService().theme == ThemeMode.dark?   TextStyle(color: Colors.white) : TextStyle(color: Colors.black),
-                  ),
+                     style: Theme.of(context).textTheme.bodySmall,
+                               ),
                   leading: const Icon(
                     Icons.person,
                     color: AppColors.lightgrey,
@@ -85,7 +86,7 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   title: Text(
                     "addnewproperty".tr,
-                    style: FirstStyle,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   leading: const Icon(
                     Icons.add_box,
@@ -98,7 +99,7 @@ class MyDrawer extends StatelessWidget {
                 ExpansionTile(
                   title: Text(
                     "ads".tr,
-                    style: FirstStyle,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   leading: const Icon(
                     Icons.shop_outlined,
@@ -108,7 +109,7 @@ class MyDrawer extends StatelessWidget {
                     ListTile(
                       title: Text(
                         "realestate".tr,
-                        style: FirstStyle,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                       leading: const Icon(
                         Icons.house,
@@ -122,7 +123,7 @@ class MyDrawer extends StatelessWidget {
                       ListTile(
                           title: Text(
                             item.name,
-                            style: FirstStyle,
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                           leading: item.image != ''
                               ? Image.network(
@@ -143,7 +144,7 @@ class MyDrawer extends StatelessWidget {
                   onTap: () {
                     Get.defaultDialog(
                         title: 'Choose Language',
-                        titleStyle: FirstStyle,
+                        titleStyle: Theme.of(context).textTheme.bodyLarge,
                         content: Column(
                           children: [
                             ListTile(
@@ -163,7 +164,7 @@ class MyDrawer extends StatelessWidget {
                           ],
                         ));
                   },
-                  title: Text("language".tr, style: FirstStyle),
+                  title: Text("language".tr, style: Theme.of(context).textTheme.bodySmall),
                   leading: const Icon(
                     Icons.language,
                     color: AppColors.lightgrey,
@@ -171,7 +172,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 ListTile(
                   title: Text(  themeData == ThemeData.dark()  ? 'Light Theme' : 'Dark Theme',
-                      style: FirstStyle),
+                      style: Theme.of(context).textTheme.bodySmall),
                   leading:
                       Icon(Theme.of(context).brightness==Brightness.light? Icons.dark_mode_rounded : Icons.light_mode_rounded,color: AppColors.lightgrey),
                   onTap: () {
@@ -185,7 +186,8 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   title: Text(
                     "about".tr,
-                    style: FirstStyle,
+                    style: Theme.of(context).textTheme.bodySmall,
+
                   ),
                   leading: const Icon(
                     Icons.help,
@@ -198,7 +200,7 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   title: Text(
                     "logout".tr,
-                    style: FirstStyle,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   leading: const Icon(
                     Icons.logout,

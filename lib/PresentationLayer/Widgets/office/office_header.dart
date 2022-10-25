@@ -7,7 +7,9 @@ import '../../../DataAccessLayer/Models/office.dart';
 
 import '../../../Constants/colors.dart';
 
-Widget officeHeader(Office office, int propertiesCount) {
+
+Widget officeHeader(Office office, int propertiesCount, final  BuildContext context) {
+  //late final  BuildContext context;
   return Container(
     padding: const EdgeInsets.only(bottom: 20),
     width: double.infinity,
@@ -56,12 +58,12 @@ Widget officeHeader(Office office, int propertiesCount) {
         const SizedBox(height: 5),
         Text(
           office.name,
-          style: FifthStyle,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         const SizedBox(height: 5),
         Text(
           office.city,
-          style: FourthSyle,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         RatingBar(
             itemSize: 30,
@@ -87,14 +89,14 @@ Widget officeHeader(Office office, int propertiesCount) {
         children: [
           Column(
             children: [
-              const Text("1K", style: firstly),
-              Text("followers".tr, style: FourthSyle),
+               Text("1K", style: Theme.of(context).textTheme.headlineMedium),
+              Text("followers".tr, style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),
           Column(
             children: [
-              Text(propertiesCount.toString(), style: firstly),
-              Text("real_state".tr, style: FourthSyle),
+              Text(propertiesCount.toString(), style: Theme.of(context).textTheme.headlineMedium),
+              Text("real_state".tr, style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),
         ],

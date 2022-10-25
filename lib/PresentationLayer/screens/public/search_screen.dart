@@ -30,7 +30,7 @@ class SearchScreen extends StatelessWidget {
         appBar: customAppBar(context),
         body: GetBuilder(
             init: searchcontroller,
-            builder: (context) {
+            builder: (_) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -40,9 +40,9 @@ class SearchScreen extends StatelessWidget {
                       autofocus: true,
                       autocorrect: true,
                       textAlign: TextAlign.center,
-                      decoration: const InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(vertical: 5),
-                          labelStyle: SecondStyle),
+                      decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.symmetric(vertical: 5),
+                          labelStyle: Theme.of(context).textTheme.titleSmall),
                       controller: searchcontroller.searchtext,
                       onChanged: (value) {
                         searchcontroller.search(value);

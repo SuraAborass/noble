@@ -51,11 +51,11 @@ class PropertyRow extends StatelessWidget {
               children: [
                 Text(
                   property.title,
-                  style: ThirdStyle,
+                  style:  Theme.of(context).textTheme.bodyMedium,
                 ),
                 Text(
                   property.city,
-                  style: eight,
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
               ],
             )

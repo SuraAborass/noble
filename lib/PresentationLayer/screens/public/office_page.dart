@@ -34,7 +34,7 @@ class OfficePage extends StatelessWidget {
                 backgroundColor: Colors.white,
                 flexibleSpace: FlexibleSpaceBar(
                   background: officeHeader(
-                      office, officePageController.properties.length),
+                      office, officePageController.properties.length,context),
                 ),
               ),
               SliverToBoxAdapter(

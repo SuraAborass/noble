@@ -16,8 +16,8 @@ class CustomBottonNav extends StatelessWidget {
           ? TextDirection.rtl
           : TextDirection.ltr,
       child: BottomNavigationBar(
-          selectedLabelStyle: FourthSyle,
-          unselectedLabelStyle: FourthSyle,
+          selectedLabelStyle: Theme.of(context).textTheme.bodyLarge,
+          unselectedLabelStyle: Theme.of(context).textTheme.bodyLarge,
           backgroundColor: AppColors.blue,
           currentIndex: MyApp.currentPage,
           onTap: (index) {

@@ -7,6 +7,7 @@ import '../Controllers/auth_controller.dart';
 import '../Controllers/box_controller.dart';
 import '../Controllers/categories_controller.dart';
 import '../Controllers/locale_controller.dart';
+import '../Controllers/property_controller.dart';
 import '../Controllers/property_type_controller.dart';
 
 class InitBinding extends Bindings {
@@ -20,5 +21,6 @@ class InitBinding extends Bindings {
     Get.put<TypesController>(TypesController());
     Get.put<ThemeService>(ThemeService());
     Get.put<BackNotificationController>(BackNotificationController());
+    //Get.put<PropertyController>(PropertyController());
   }
 }

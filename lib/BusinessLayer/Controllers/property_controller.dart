@@ -9,14 +9,14 @@ class PropertyController extends GetxController {
   var propertyRepo = PropertyRepo();
   var isLoading = false.obs;
 
-  late String type;
-  late String title;
+  late List<Property> property;
+
 
   @override
   void onInit() async {
     isLoading.value = true;
     update();
-    properties = await propertyRepo.getProperty(type,title);
+    properties = await propertyRepo.getProperty(property);
 
     isLoading.value = false;
     update();

@@ -54,11 +54,11 @@ class AdvertisingRow extends StatelessWidget {
               children: [
                 Text(
                   advertising.name,
-                  style: ThirdStyle,
+                  style:  Theme.of(context).textTheme.bodyMedium,
                 ),
                 Text(
                   advertising.description,
-                  style: eight,
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
               ],
             )

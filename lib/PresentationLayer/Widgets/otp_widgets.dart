@@ -40,7 +40,7 @@ class Verify extends StatelessWidget {
         onChanged: (text) {},
         autoFocus: true,
         cursorColor: AppColors.blue,
-        textStyle: fifthly,
+        textStyle: Theme.of(context).textTheme.bodyMedium,
         keyboardType: TextInputType.number,
       ),
     );

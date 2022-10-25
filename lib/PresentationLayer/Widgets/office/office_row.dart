@@ -28,11 +28,11 @@ class OfficeRow extends StatelessWidget {
             children: [
               Text(
                 office.name,
-                style: ThirdStyle,
+                style:  Theme.of(context).textTheme.bodyMedium,
               ),
               Text(
                 office.city,
-                style: ThirdStyle,
+                style:  Theme.of(context).textTheme.bodyMedium,
               ),
             ],
           )

@@ -5,11 +5,12 @@ import 'package:noble/DataAccessLayer/Clients/property_client.dart';
 class PropertyRepo {
   var client = PropertyClient();
 
-  Future<List<Property>> getProperty(type,title) async {
-    var response = await client.getProperty(type,title);
+  Future<List<Property>> getProperty(property) async {
+    var response = await client.getProperty(property);
 
     if (response.isNotEmpty) {
       return response.map<Property>((item) => Property.fromMap(item)).toList();
+    
     }
     return [];
   }

@@ -17,13 +17,13 @@ class HighLightsTextfield extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
       child: TextFormField(
         textDirection: TextDirection.rtl,
-        style: FirstStyle,
+        style: Theme.of(context).textTheme.bodySmall,
         decoration: InputDecoration(
             hintTextDirection: TextDirection.rtl,
             fillColor: const Color(0XFFF8F8F8),
             prefixIcon: const Icon(Icons.search, color: Color(0XFF0C3877)),
             hintText: "search_in_highlights".tr,
-            hintStyle: thirdly,
+            hintStyle: Theme.of(context).textTheme.bodyText1,
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: const BorderSide(color: Color(0XFFD2D2D2))),
@@ -55,11 +55,11 @@ class HighLightsBody extends StatelessWidget {
                     onTap: () {},
                     title: Text(
                       propertyController.properties[i].title,
-                      style: FirstStyle,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                     subtitle: Text(
                       propertyController.properties[i].price,
-                      style: thirdly,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                     leading: CircleAvatar(
                       backgroundImage: NetworkImage(json

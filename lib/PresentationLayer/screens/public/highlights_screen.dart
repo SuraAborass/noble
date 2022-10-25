@@ -61,7 +61,7 @@ class HighLightsScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
                 child: Text(
                   "ss".tr,
-                  style: ThirdStyle,
+                  style:  Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
               HighLightsBody()

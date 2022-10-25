@@ -16,13 +16,13 @@ class ProfileTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: fifthly,
+      style: Theme.of(context).textTheme.bodyMedium,
       textAlign: TextAlign.start,
       controller: controller,
       obscureText: obsecure,
       decoration: InputDecoration(
           fillColor: Colors.white,
-          hintStyle: thirdly,
+          hintStyle: Theme.of(context).textTheme.bodyText1,
           hintText: hint,
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
@@ -54,16 +54,16 @@ class PropertyTextfield extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15),
           child: Text(
             label,
-            style: SecondStyle,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         TextFormField(
-          style: fifthly,
+          style: Theme.of(context).textTheme.bodyMedium,
           textAlign: TextAlign.start,
           controller: controller,
           decoration: InputDecoration(
               fillColor: Colors.white,
-              hintStyle: thirdly,
+              hintStyle: Theme.of(context).textTheme.bodyLarge,
               hintText: hint,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),

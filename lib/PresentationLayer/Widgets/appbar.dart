@@ -34,7 +34,7 @@ PreferredSizeWidget customAppBar(BuildContext context) {
     }),
     title: Text(
       'noble_realstate'.tr,
-      style: ThirdStyle,
+      style: Theme.of(context).textTheme.bodyMedium,
     ),
     centerTitle: true,
     actions: [

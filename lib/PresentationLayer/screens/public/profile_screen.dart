@@ -39,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
         appBar: customAppBar(context),
         body: GetBuilder(
             init: profileScreenController,
-            builder: (context) {
+            builder: (_) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: boxContoller.user == null
@@ -47,10 +47,10 @@ class ProfileScreen extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(20.0),
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 "There Is No Account , Login To Continue",
-                                style: SecondStyle,
+                                style: Theme.of(context).textTheme.titleSmall,
                               ),
                             ],
                           ),
@@ -77,7 +77,7 @@ class ProfileScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     "name".tr,
-                                    style: ThirdStyle,
+                                    style:  Theme.of(context).textTheme.bodyMedium,
                                   ),
                                   const SizedBox(
                                     height: 3,
@@ -98,7 +98,7 @@ class ProfileScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     "mobilenumber".tr,
-                                    style: ThirdStyle,
+                                    style:  Theme.of(context).textTheme.bodyMedium,
                                   ),
                                   const SizedBox(
                                     height: 3,
@@ -119,7 +119,7 @@ class ProfileScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     "passowrd".tr,
-                                    style: ThirdStyle,
+                                    style:  Theme.of(context).textTheme.bodyMedium,
                                   ),
                                   const SizedBox(
                                     height: 3,

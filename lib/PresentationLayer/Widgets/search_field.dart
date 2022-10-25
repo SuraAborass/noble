@@ -19,7 +19,7 @@ class SearchField extends StatelessWidget {
         },
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.center,
-        style: FirstStyle,
+        style: Theme.of(context).textTheme.bodyLarge,
         decoration: InputDecoration(
             hintTextDirection: TextDirection.rtl,
             fillColor: const Color(0XFFF8F8F8),

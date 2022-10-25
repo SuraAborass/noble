@@ -34,7 +34,7 @@ class AddPropertyScreen extends StatelessWidget {
         bottomNavigationBar: const CustomBottonNav(),
         body: GetBuilder<AddPropertyController>(
             init: addPropertyController,
-            builder: (context) {
+            builder: (_) {
               return Column(
                 children: [
                   pageTitle("addnewproperty".tr, null),
@@ -120,7 +120,7 @@ class AddPropertyScreen extends StatelessWidget {
                                 ),
                                 Text(
                                   "p_type".tr,
-                                  style: SecondStyle,
+                                  style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -142,7 +142,7 @@ class AddPropertyScreen extends StatelessWidget {
                                 ),
                                 Text(
                                   "p_options".tr,
-                                  style: SecondStyle,
+                                  style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -167,7 +167,7 @@ class AddPropertyScreen extends StatelessWidget {
                                 ),
                                 Text(
                                   "p_type".tr,
-                                  style: SecondStyle,
+                                  style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -192,7 +192,7 @@ class AddPropertyScreen extends StatelessWidget {
                                 ),
                                 Text(
                                   "city".tr,
-                                  style: SecondStyle,
+                                  style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -222,7 +222,7 @@ class AddPropertyScreen extends StatelessWidget {
                                 ),
                                 Text(
                                   "cladding".tr,
-                                  style: SecondStyle,
+                                  style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -268,12 +268,14 @@ class AddPropertyScreen extends StatelessWidget {
                                           child: propertyCheck(
                                               "mesaad".tr,
                                               addPropertyController.hasElevator,
-                                              addPropertyController)),
+                                              addPropertyController,
+                                              context)),
                                       Expanded(
                                         child: propertyCheck(
                                             "moaldeh".tr,
                                             addPropertyController.hasGenerator,
-                                            addPropertyController),
+                                            addPropertyController,
+                                            context),
                                       ),
                                     ],
                                   ),
@@ -283,13 +285,15 @@ class AddPropertyScreen extends StatelessWidget {
                                         child: propertyCheck(
                                             "terras".tr,
                                             addPropertyController.hasTerrace,
-                                            addPropertyController),
+                                            addPropertyController,
+                                            context),
                                       ),
                                       Expanded(
                                         child: propertyCheck(
                                             "pool".tr,
                                             addPropertyController.hasPool,
-                                            addPropertyController),
+                                            addPropertyController,
+                                            context),
                                       ),
                                     ],
                                   ),
@@ -300,13 +304,15 @@ class AddPropertyScreen extends StatelessWidget {
                                             "mokaiif".tr,
                                             addPropertyController
                                                 .hasConditioner,
-                                            addPropertyController),
+                                            addPropertyController,
+                                            context),
                                       ),
                                       Expanded(
                                         child: propertyCheck(
                                             "saona".tr,
                                             addPropertyController.hasSaona,
-                                            addPropertyController),
+                                            addPropertyController,
+                                            context),
                                       ),
                                     ],
                                   ),
@@ -316,13 +322,15 @@ class AddPropertyScreen extends StatelessWidget {
                                         child: propertyCheck(
                                             "carage".tr,
                                             addPropertyController.hasGarag,
-                                            addPropertyController),
+                                            addPropertyController,
+                                            context),
                                       ),
                                       Expanded(
                                         child: propertyCheck(
                                             "shofag".tr,
                                             addPropertyController.hasShofag,
-                                            addPropertyController),
+                                            addPropertyController,
+                                            context),
                                       ),
                                     ],
                                   ),
@@ -332,14 +340,17 @@ class AddPropertyScreen extends StatelessWidget {
                                         child: propertyCheck(
                                             "jakoozy".tr,
                                             addPropertyController.hasJacuzzi,
-                                            addPropertyController),
+                                            addPropertyController,
+                                        context),
                                       ),
                                       Expanded(
                                         child: propertyCheck(
                                             "garden".tr,
                                             addPropertyController.hasGarden,
-                                            addPropertyController),
+                                            addPropertyController,
+                                        context),
                                       ),
+
                                     ],
                                   ),
                                 ],
@@ -372,14 +383,15 @@ class AddPropertyScreen extends StatelessWidget {
   }
 }
 
-Widget propertyCheck(String title, RxBool value, controller) {
+
+Widget propertyCheck(String title, RxBool value, controller,context) {
   return CheckboxListTile(
       controlAffinity: ListTileControlAffinity.leading,
       contentPadding: const EdgeInsets.all(0),
       activeColor: AppColors.orange,
       title: Text(
         title,
-        style: thirdly,
+        style: Theme.of(context).textTheme.titleLarge,
       ),
       value: value.value,
       onChanged: (bool? bool) {
@@ -410,7 +422,7 @@ class _RowButtonsState extends State<RowButtons> {
         children: [
           Text(
             widget.text,
-            style: SecondStyle,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(
             height: 10,
@@ -451,8 +463,8 @@ class _RowButtonsState extends State<RowButtons> {
                       child: Text(
                         (index + 1).toString(),
                         style: selectedindex == index && selected
-                            ? secondly
-                            : FirstStyle,
+                            ? Theme.of(context).textTheme.headlineLarge
+                            : Theme.of(context).textTheme.displayLarge,
                       ),
                     ),
                   ),

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +6,6 @@ import 'package:noble/PresentationLayer/Widgets/snackbars.dart';
 import '../../Constants/api_links.dart';
 import '../../Constants/routes.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../Constants/colors.dart';
 import '../../Constants/font_styles.dart';
 import '../../DataAccessLayer/Models/property.dart';
@@ -83,7 +81,7 @@ class SliverAppBarProperty extends StatelessWidget {
             const SizedBox(height: 25),
             Row(
               children: [
-                Text("realstate_specifications".tr, style: fifthly),
+                Text("realstate_specifications".tr, style: Theme.of(context).textTheme.bodyMedium),
                 const Spacer(),
                 Row(
                   children: [
@@ -97,7 +95,7 @@ class SliverAppBarProperty extends StatelessWidget {
                     ),
                     Text(
                       propety.views.toString(),
-                      style: thirdly,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     )
                   ],
                 )
@@ -116,7 +114,7 @@ class SliverAppBarProperty extends StatelessWidget {
                 ),
                 Text(
                   propety.price,
-                  style: fourthly,
+                  style: Theme.of(context).textTheme.displayLarge,
                 )
               ],
             ),
@@ -133,7 +131,7 @@ class SliverAppBarProperty extends StatelessWidget {
                     const SizedBox(
                       width: 3,
                     ),
-                    Text(propety.space, style: SecondStyle)
+                    Text(propety.space, style: Theme.of(context).textTheme.titleSmall)
                   ],
                 ),
                 Row(
@@ -145,7 +143,7 @@ class SliverAppBarProperty extends StatelessWidget {
                     const SizedBox(
                       width: 3,
                     ),
-                    Text(propety.city, style: SecondStyle)
+                    Text(propety.city, style: Theme.of(context).textTheme.titleSmall)
                   ],
                 ),
                 Row(
@@ -157,7 +155,7 @@ class SliverAppBarProperty extends StatelessWidget {
                     const SizedBox(
                       width: 3,
                     ),
-                    Text(propety.rooms.toString(), style: SecondStyle)
+                    Text(propety.rooms.toString(), style: Theme.of(context).textTheme.titleSmall)
                   ],
                 ),
                 Row(
@@ -169,7 +167,7 @@ class SliverAppBarProperty extends StatelessWidget {
                     const SizedBox(
                       width: 3,
                     ),
-                    Text(propety.baths.toString(), style: SecondStyle)
+                    Text(propety.baths.toString(), style: Theme.of(context).textTheme.titleSmall)
                   ],
                 ),
               ],
@@ -205,8 +203,8 @@ class SliverAppBarProperty extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(propety.office!.name, style: fifthly),
-                      Text(propety.office!.city, style: thirdly)
+                      Text(propety.office!.name, style: Theme.of(context).textTheme.bodyMedium),
+                      Text(propety.office!.city, style: Theme.of(context).textTheme.bodyLarge)
                     ],
                   ),
                   const Spacer(),
@@ -231,18 +229,18 @@ class SliverAppBarProperty extends StatelessWidget {
             const SizedBox(height: 15),
             Text(
               "about_realstate".tr,
-              style: fifthly,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             const SizedBox(height: 15),
             TextFormField(
               minLines: 1,
               maxLines: 10,
-              style: FirstStyle,
+              style: Theme.of(context).textTheme.bodySmall,
               decoration: InputDecoration(
                   border:
                       const UnderlineInputBorder(borderSide: BorderSide.none),
                   hintText: "hint_realstate".tr,
-                  hintStyle: thirdly),
+                  hintStyle: Theme.of(context).textTheme.bodyLarge),
             ),
             const SizedBox(height: 200)
           ]),

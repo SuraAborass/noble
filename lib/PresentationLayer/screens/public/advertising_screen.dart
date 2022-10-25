@@ -70,28 +70,28 @@ class AdvertiingScreen extends StatelessWidget {
                               pageTitle(advertising.name, null),
                               Text(
                                 "price".tr,
-                                style: ThirdStyle,
+                                style: Theme.of(context).textTheme.bodyMedium,
                               ),
                               const SizedBox(
                                 height: 20,
                               ),
                               Text(
                                 advertising.price.toStringAsFixed(0),
-                                style: fourthly,
+                                style: Theme.of(context).textTheme.displayLarge,
                               ),
                               const SizedBox(
                                 height: 20,
                               ),
                               Text(
                                 "spec".tr,
-                                style: ThirdStyle,
+                                style:  Theme.of(context).textTheme.bodyMedium,
                               ),
                               const SizedBox(
                                 height: 20,
                               ),
                               Text(
                                 advertising.description,
-                                style: fourthly,
+                                style: Theme.of(context).textTheme.displayLarge,
                               ),
                             ],
                           ),

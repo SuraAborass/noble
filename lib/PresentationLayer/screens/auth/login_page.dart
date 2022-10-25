@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
           ? TextDirection.rtl
           : TextDirection.ltr,
       child: Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         bottomNavigationBar: BottomCircle(
           text: 'you_can_create_account'.tr,
           circleColor: const Color(0XFF707070).withOpacity(.2),
@@ -34,7 +34,7 @@ class LoginPage extends StatelessWidget {
             Expanded(
               child: Container(
                 child: Center(
-                  child: Text("login".tr, style: firstly),
+                  child: Text("login".tr, style: Theme.of(context).textTheme.headlineMedium),
                 ),
                 width: double.infinity,
                 decoration: const BoxDecoration(
@@ -54,7 +54,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         "enter_your_phone_number".tr,
-                        style: FirstStyle,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8.0),

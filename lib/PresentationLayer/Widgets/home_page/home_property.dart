@@ -51,7 +51,7 @@ class HomeProperty extends StatelessWidget {
                   child: Center(
                       child: Text(
                     "sell".tr,
-                    style: seventh,
+                    style: Theme.of(context).textTheme.displaySmall,
                   )),
                   decoration: BoxDecoration(
                       color: AppColors.blue,
@@ -63,7 +63,7 @@ class HomeProperty extends StatelessWidget {
                   children: [
                     Text(
                       property.title,
-                      style: FourthSyle,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,

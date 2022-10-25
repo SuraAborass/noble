@@ -45,12 +45,12 @@ class HomePage extends StatelessWidget {
                         children: [
                           Text(
                             "last_story".tr,
-                            style: FirstStyle,
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                           const Spacer(),
                           Text(
                             "show_all".tr,
-                            style: thirdly,
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -74,11 +74,11 @@ class HomePage extends StatelessWidget {
                         child: Row(
                           children: [
                             Text("real_estate_ofices".tr,
-                                style: FirstStyle),
+                                style: Theme.of(context).textTheme.bodySmall),
                             const Spacer(),
                             Text(
                               "show_all".tr,
-                              style: thirdly,
+                              style: Theme.of(context).textTheme.bodyText1,
                             ),
                           ],
                         ),
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                         children: [
                           Text(
                             "top_real_estate_announcements".tr,
-                            style: FirstStyle,
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                           const Spacer(),
                           InkWell(
@@ -111,7 +111,7 @@ class HomePage extends StatelessWidget {
                               tag: 'highlights_hero',
                               child: Text(
                                 "show_all".tr,
-                                style: thirdly,
+                                style: Theme.of(context).textTheme.bodyText1,
                               ),
                             ),
                           ),

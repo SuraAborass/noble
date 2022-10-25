@@ -45,7 +45,7 @@ class AboutScreen extends StatelessWidget {
                   Text(
                     "aboutdesc".tr,
                     textAlign: TextAlign.center,
-                    style: thirdly,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ],
               ),

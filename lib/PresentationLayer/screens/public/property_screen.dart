@@ -28,7 +28,7 @@ class PropertyScreen extends StatelessWidget {
             child: Center(
                 child: Padding(
               padding: const EdgeInsets.all(12.0),
-              child: Text("buy_the_realstate".tr, style: sixthly),
+              child: Text("buy_the_realstate".tr, style: Theme.of(context).textTheme.displayMedium),
             )),
           ),
         ),
